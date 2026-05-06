@@ -1,5 +1,6 @@
 import type { SectionProps } from "../config";
 import { useCN } from "@/shared/lib/useCN/useCN";
+import "../styles.pcss";
 
 export const Section = ({ title, children }: SectionProps) => {
   const { getCN } = useCN("section");

@@ -17,22 +17,25 @@
 html {
   -webkit-font-smoothing: antialiased;
   height: 100%;
-
- 
   font-size: var(--baseFontSize);
-
- 
   font-family: var(--baseFontFamily);
   line-height: var(--baseLineHeight);
   font-weight: var(--baseFontWeight);
-
   overflow-x: hidden;
 }
 
 body {
-  min-height: 100%;
   min-width: var(--siteMinWidth);
-
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  margin: 0;
   background: var(--colorGray100);
   color: var(--colorBlack);
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
 }

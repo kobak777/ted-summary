@@ -16,10 +16,10 @@ export const IndexPage = () => {
     <PageContainer>
       <Section title="Навигация по проекту TED Summary">
         <ul className={getCN("list")}>
-          {links.map((item) => (
-            <li key={item.href} className={getCN("item")}>
-              <a className={getCN("link")} href={item.href}>
-                {item.label}
+          {links.map(({ href, label }) => (
+            <li key={href} className={getCN("item")}>
+              <a className={getCN("link")} href={href}>
+                {label}
               </a>
             </li>
           ))}
