@@ -1,6 +1,6 @@
 import { useCN } from "@/shared/lib/useCN/useCN";
+import { PageContainer } from "@/shared/ui/pageContainer";
 import { LanguageSwitcher } from "@/features/languageSwitcher";
-
 import "../styles.pcss";
 
 export const Header = () => {
@@ -8,15 +8,17 @@ export const Header = () => {
 
   return (
     <header className={getCN()}>
-      <div className={getCN("left")}>
-        <a href="/" className={getCN("logo")}>
-          TED Summary
-        </a>
-      </div>
+      <PageContainer>
+        <div className={getCN("left")}>
+          <a href="/" className={getCN("logo")}>
+            TED Summary
+          </a>
+        </div>
 
-      <div className={getCN("right")}>
-        <LanguageSwitcher />
-      </div>
+        <div className={getCN("right")}>
+          <LanguageSwitcher />
+        </div>
+      </PageContainer>
     </header>
   );
 };

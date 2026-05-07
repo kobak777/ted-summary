@@ -1,31 +1,17 @@
 .input {
-  /* ======================
-       VARIABLES (локальные)
-    ====================== */
-
   --inputHeight: 4.8rem;
   --inputPaddingX: 1.6rem;
-
   --inputFontSize: 1.6rem;
-
   --inputBg: var(--colorWhite);
   --inputText: var(--colorBlack);
-
   --inputBorder: var(--colorGray300);
   --inputBorderHover: var(--colorGray500);
   --inputBorderFocus: var(--colorPrimary);
-
   --inputRadius: 0.8rem;
-
   --inputPlaceholder: var(--colorGray500);
-
   --inputTransition: 0.15s ease;
-
-  /* ======================
-       BASE
-    ====================== */
-
   width: 100%;
+  min-width: 400px;
   height: var(--inputHeight);
   padding: 0 var(--inputPaddingX);
   font-size: var(--inputFontSize);
@@ -35,26 +21,22 @@
   border-radius: var(--inputRadius);
   outline: none;
   transition: border var(--inputTransition), box-shadow var(--inputTransition);
-}
 
-/* hover */
-.input:hover {
-  border-color: var(--inputBorderHover);
-}
+  &:hover {
+    border-color: var(--inputBorderHover);
+  }
 
-/* focus */
-.input:focus {
-  border-color: var(--inputBorderFocus);
-  box-shadow: 0 0 0 3px var(--colorPrimarySoft);
-}
+  &:focus {
+    border-color: var(--inputBorderFocus);
+    box-shadow: 0 0 0 3px var(--colorPrimarySoft);
+  }
 
-/* placeholder */
-.input::placeholder {
-  color: var(--inputPlaceholder);
-}
+  &::placeholder {
+    color: var(--inputPlaceholder);
+  }
 
-/* disabled */
-.input:disabled {
-  background: var(--colorGray100);
-  cursor: not-allowed;
+  &:disabled {
+    background: var(--colorGray100);
+    cursor: not-allowed;
+  }
 }

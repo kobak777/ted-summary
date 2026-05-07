@@ -1,6 +1,7 @@
 import { PageContainer } from "@/shared/ui/pageContainer/ui/PageContainer";
 import { Section } from "@/shared/ui/section/ui/Section";
 import { useCN } from "@/shared/lib/useCN/useCN";
+import {Button} from "@/shared/ui/button";
 
 export const ErrorPage = () => {
   const { getCN } = useCN("errorPage");
@@ -13,9 +14,7 @@ export const ErrorPage = () => {
             Запрашиваемая страница не существует или была перемещена.
           </p>
 
-          <a className={getCN("link")} href="/">
-            Вернуться на главную
-          </a>
+          <Button type="link" href="/" label="Вернуться на главную" />
         </div>
       </Section>
     </PageContainer>

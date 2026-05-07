@@ -1,19 +1,10 @@
-import type { ButtonHTMLAttributes, AnchorHTMLAttributes, ReactNode } from "react";
+import type { ReactNode } from "react";
 
-type BaseProps = {
+export type ButtonProps = {
   label?: string;
   children?: ReactNode;
-  variant?: "primary" | "secondary" | "ghost";
+  onClick?: () => void;
+  href?: string;
+  type?: "button" | "link" | "submit";
+  className?: string;
 };
-
-type ButtonAsButton = BaseProps &
-  ButtonHTMLAttributes<HTMLButtonElement> & {
-  href?: never;
-};
-
-type ButtonAsLink = BaseProps &
-  AnchorHTMLAttributes<HTMLAnchorElement> & {
-  href: string;
-};
-
-export type ButtonProps = ButtonAsButton | ButtonAsLink;

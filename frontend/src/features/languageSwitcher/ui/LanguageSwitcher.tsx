@@ -17,7 +17,7 @@ export const LanguageSwitcher = () => {
   return (
     <div className={getCN()}>
       <Button
-        className={getCN("btn")}
+        className={getCN("btn", {}, ["button"])}
         onClick={() => setOpen((prev) => !prev)}
       >
         {active}

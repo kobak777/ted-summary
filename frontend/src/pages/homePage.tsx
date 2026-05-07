@@ -1,29 +1,29 @@
 import { useState } from "react";
-import { Input } from "@/shared/ui/input";
-import { Button } from "@/shared/ui/button";
 import { PageContainer } from "@/shared/ui/pageContainer";
 import { Section } from "@/shared/ui/section";
+import { SummaryForm } from "@/entity/summaryInput";
 
 export const HomePage = () => {
   const [url, setUrl] = useState("");
   const [summary, setSummary] = useState<string | null>(null);
+  const [isLoading, setIsLoading] = useState(false);
 
-  const handleSubmit = () => {
+  const handleSubmit = async () => {
+    setIsLoading(true);
+
     setSummary("Test summary for TED video");
+    setIsLoading(false);
   };
 
   return (
     <PageContainer>
       <Section title="TED Summary Tool">
-        <Input
-          value={url}
-          onChange={setUrl}
-          placeholder="Insert TED link"
+        <SummaryForm
+          url={url}
+          onUrlChange={setUrl}
+          onSubmit={handleSubmit}
+          isLoading={isLoading}
         />
-
-        <Button onClick={handleSubmit}>
-          Generate
-        </Button>
       </Section>
 
       {summary && (

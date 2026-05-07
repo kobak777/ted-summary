@@ -4,28 +4,22 @@ import "../styles.pcss";
 
 export const Button = (props: ButtonProps) => {
   const { getCN } = useCN("button");
-
-  const { label, children, variant, ...rest } = props;
+  const { label, children, onClick, href, type = "button", className } = props;
   const content = label || children;
 
-  if ("href" in props && props.href) {
-    const { href, ...anchorProps } = rest as any;
-
+  if (type === "link" && href) {
     return (
-      <a className={getCN()} href={props.href} {...anchorProps}>
+      <a className={getCN("", { link: true })} href={href}>
         {content}
       </a>
     );
   }
 
-  const { onClick, type = "button", ...buttonProps } = rest as any;
-
   return (
     <button
-      className={getCN()}
+      type={type === "submit" ? "submit" : "button"}
+      className={getCN("", {}, className ? [className] : [])}
       onClick={onClick}
-      type={type}
-      {...buttonProps}
     >
       {content}
     </button>

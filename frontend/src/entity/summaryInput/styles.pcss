@@ -1,0 +1,20 @@
+.summaryForm {
+  display: flex;
+  gap: 3.75rem;
+  @media(--mobile) {
+    flex-direction: column;
+  }
+
+  &__field {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+  }
+
+  &__error {
+    color: var(--colorPrimary);
+    font-size: 2rem;
+    margin-top: -0.5rem;
+  }
+}
