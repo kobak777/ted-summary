@@ -1,8 +1,17 @@
+/* Базовые размеры для десктопа */
 h1,
 .h1 {
   font-size: 7rem;
   line-height: 1.2;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 4rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 3rem;
+  }
 }
 
 h2,
@@ -10,19 +19,43 @@ h2,
   font-size: 5rem;
   line-height: 1.3;
   font-weight: 700;
+
+  @media (max-width: 768px) {
+    font-size: 3.2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 2.4rem;
+  }
 }
 
 h3,
 .h3 {
   font-size: 3rem;
   line-height: 1.4;
+
+  @media (max-width: 768px) {
+    font-size: 2.2rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.8rem;
+  }
 }
 
 /* paragraph */
 p {
   font-size: 2rem;
   line-height: 1.5;
-  margin: 2rem 0;
+  margin: 0 0 2rem 0;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 }
 
 /* links */
@@ -30,6 +63,14 @@ a {
   font-size: 2rem;
   color: var(--colorPrimary);
   text-decoration: none;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 
   &:hover {
     text-decoration: underline;
@@ -47,4 +88,12 @@ ol {
 li {
   font-size: 2rem;
   line-height: 1.5;
+
+  @media (max-width: 768px) {
+    font-size: 1.6rem;
+  }
+
+  @media (max-width: 480px) {
+    font-size: 1.4rem;
+  }
 }

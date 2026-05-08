@@ -1,0 +1,71 @@
+{
+  "summary": {
+    "form": {
+      "placeholder": "Insert TED link (e.g., https://www.ted.com/talks/...)",
+      "button": "Generate Summary",
+      "buttonLoading": "Generating..."
+    },
+    "display": {
+      "title": "Generated Summary",
+      "copy": "Copy to clipboard",
+      "copied": "Copied!",
+      "download": "Download DOCX"
+    },
+    "loader": {
+      "text": "Generating summary..."
+    },
+    "errors": {
+      "urlRequired": "Enter a link to a TED video",
+      "invalidUrl": "Enter a valid URL",
+      "notTED": "The link must be from ted.com",
+      "apiError": "Error generating summary"
+    },
+    "validation": {
+      "urlRequired": "Enter a link to a TED video",
+      "invalidUrl": "Enter a valid URL",
+      "notTED": "The link must be from ted.com"
+    },
+    "toolTitle": "TED Summary Tool"
+  },
+  "header": {
+    "logo": "TED Summary"
+  },
+  "footer": {
+    "logo": "TED Summary",
+    "policy": "Privacy Policy"
+  },
+  "policy": {
+    "title": "Privacy Policy",
+    "section1": {
+      "title": "1. What data is collected",
+      "text": "Only the TED video URL you enter for summarization. The service does not require registration and does not request personal data."
+    },
+    "section2": {
+      "title": "2. How data is used",
+      "text": "The URL is used to obtain the video transcript and generate a summary. Data is not stored after processing."
+    },
+    "section3": {
+      "title": "3. Data transfer",
+      "text": "Data is not transferred to third parties. The transcript is obtained directly from the official TED.com website."
+    },
+    "backButton": "Back to home"
+  },
+  "errorPage": {
+    "title": "404 — Page not found",
+    "text": "The requested page does not exist or has been moved.",
+    "button": "Back to home"
+  },
+  "language": {
+    "ru": "RUS",
+    "en": "ENG"
+  },
+  "indexPage": {
+    "title": "TED Summary Project Navigation",
+    "links": {
+      "home": "Home (Summary)",
+      "policy": "Privacy Policy",
+      "typo": "Typography (UI kit)",
+      "error": "404 Error"
+    }
+  }
+}

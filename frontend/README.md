@@ -1,73 +1,29 @@
-# React + TypeScript + Vite
+# Ссылки для тестирования MSW
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Эндпоинты
 
-Currently, two official plugins are available:
+| Эндпоинт | URL |
+|----------|-----|
+| Общий (RU) | `POST /api/summarize` |
+| Русский | `POST /api/summarize/ru` |
+| Английский | `POST /api/summarize/en` |
+| Статус | `GET /api/status` |
+| Инфо о видео | `GET /api/video-info?url=...` |
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## TED ссылки для теста
 
-## React Compiler
+ 
+https://www.ted.com/talks/simon_sinek_how_great_leaders_inspire_action
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+https://www.ted.com/talks/tech_future_ai
 
-## Expanding the ESLint configuration
+https://www.ted.com/talks/psychology_happiness
+ 
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+### Ошибки
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+(пустая строка)
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+https://www.youtube.com/watch?v=123
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+not_a_valid_url

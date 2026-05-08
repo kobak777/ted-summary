@@ -3,4 +3,5 @@ export type InputProps = {
   onChange: (value: string) => void;
   placeholder?: string;
   className?: string;
+  isWithClearBtn?: boolean;
 };

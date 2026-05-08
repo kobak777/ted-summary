@@ -1,25 +1,27 @@
+import { useTranslation } from "react-i18next";
 import { PageContainer } from "@/shared/ui/pageContainer/ui/PageContainer";
 import { Section } from "@/shared/ui/section/ui/Section";
 import { useCN } from "@/shared/lib/useCN/useCN";
 
 const links = [
-  { label: "Главная (Summary)", href: "/home" },
-  { label: "Политика конфиденциальности", href: "/policy" },
-  { label: "Типографика (UI kit)", href: "/typo" },
-  { label: "Ошибка 404", href: "/error" }
+  { href: "/home", labelKey: "indexPage.links.home" },
+  { href: "/policy", labelKey: "indexPage.links.policy" },
+  { href: "/typo", labelKey: "indexPage.links.typo" },
+  { href: "/error", labelKey: "indexPage.links.error" }
 ];
 
 export const IndexPage = () => {
+  const { t } = useTranslation();
   const { getCN } = useCN("indexPage");
 
   return (
     <PageContainer>
-      <Section title="Навигация по проекту TED Summary">
+      <Section title={t("indexPage.title")}>
         <ul className={getCN("list")}>
-          {links.map(({ href, label }) => (
+          {links.map(({ href, labelKey }) => (
             <li key={href} className={getCN("item")}>
               <a className={getCN("link")} href={href}>
-                {label}
+                {t(labelKey)}
               </a>
             </li>
           ))}

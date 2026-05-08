@@ -1,0 +1,29 @@
+.summaryDisplay {
+  &__container {
+    animation: fadeIn 0.3s ease-in;
+  }
+
+  &__content {
+    background: var(--colorWhite);
+    border-radius: 1.5rem;
+    padding: 2rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+    color: var(--colorBlack);
+  }
+
+
+  &__actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 3rem;
+  }
+
+
+  &--copied {
+    --btnBg: var(--colorSuccess);
+    --btnBgHover: var(--colorSuccess);
+    --btnBgActive: var(--colorSuccess);
+  }
+}
+

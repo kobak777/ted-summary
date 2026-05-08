@@ -1,4 +1,6 @@
 .languageSwitcher {
+
+  --btnFontSize: 2rem;
   position: relative;
 
   &__dropdown {
@@ -12,7 +14,7 @@
     box-shadow: 0 10px 25px -5px rgb(0, 0, 0, 0.1), 0 8px 10px -6px rgb(0, 0, 0, 0.02);
     z-index: 100;
     opacity: 0;
-    transform: translateY(-8px);
+    transform: translateY(-1rem);
     animation: dropdownSlideIn 0.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
 
     &:hover {
@@ -26,8 +28,8 @@
       position: absolute;
       top: -5px;
       right: 1.5rem;
-      width: 10px;
-      height: 10px;
+      width: 1.25rem;
+      height: 1.25rem;
       background: var(--colorWhite);
       border-left: 1px solid var(--colorGray200);
       border-top: 1px solid var(--colorGray200);
@@ -36,16 +38,14 @@
     }
   }
 
+
   .button.languageSwitcher__option {
     width: 100%;
     padding: 1rem 1.2rem;
-    font-size: 1.4rem;
     font-weight: 500;
     text-align: left;
     border: none;
-    border-radius: 0.8rem;
     background: var(--colorWhite);
-    cursor: pointer;
     color: var(--colorBlack);
     transition: all 0.15s ease;
 
@@ -57,17 +57,5 @@
     &:active {
       transform: scale(0.96);
     }
-  }
-}
-
-@keyframes dropdownSlideIn {
-  0% {
-    opacity: 0;
-    transform: translateY(-8px);
-  }
-
-  100% {
-    opacity: 1;
-    transform: translateY(0);
   }
 }

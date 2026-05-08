@@ -1,9 +1,11 @@
+import { useTranslation } from "react-i18next";
 import { useCN } from "@/shared/lib/useCN/useCN";
 import { PageContainer } from "@/shared/ui/pageContainer";
 import { LanguageSwitcher } from "@/features/languageSwitcher";
 import "../styles.pcss";
 
 export const Header = () => {
+  const { t } = useTranslation();
   const { getCN } = useCN("header");
 
   return (
@@ -11,7 +13,7 @@ export const Header = () => {
       <PageContainer>
         <div className={getCN("left")}>
           <a href="/" className={getCN("logo")}>
-            TED Summary
+            {t("header.logo")}
           </a>
         </div>
 

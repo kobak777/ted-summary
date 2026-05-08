@@ -11,7 +11,6 @@
   --inputPlaceholder: var(--colorGray500);
   --inputTransition: 0.15s ease;
   width: 100%;
-  min-width: 400px;
   height: var(--inputHeight);
   padding: 0 var(--inputPaddingX);
   font-size: var(--inputFontSize);
@@ -21,6 +20,13 @@
   border-radius: var(--inputRadius);
   outline: none;
   transition: border var(--inputTransition), box-shadow var(--inputTransition);
+  @media (max-width: 768px) {
+    --inputHeight: 4rem;
+    --inputPaddingX: 1.2rem;
+    --inputFontSize: 1.4rem;
+    min-width: auto;
+    padding-right: 4rem;
+  }
 
   &:hover {
     border-color: var(--inputBorderHover);
@@ -38,5 +44,26 @@
   &:disabled {
     background: var(--colorGray100);
     cursor: not-allowed;
+  }
+
+  &__wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  &__clearBtn {
+    --btnHeight: 3rem;
+    --btnPaddingX: 1rem;
+    --btnBg: transparent;
+    --btnText: var(--colorGray500);
+    --btnFontSize: 1.4rem;
+    --btnBgHover: transparent;
+    --btnBgActive: transparent;
+    --btnTextHover: var(--colorPrimary);
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }

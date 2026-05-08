@@ -1,6 +1,5 @@
 .header {
   display: flex;
-  padding: 2rem 3rem;
   background: var(--gradientHeader);
   border-bottom: 1px solid var(--colorGray200);
 
@@ -14,6 +13,9 @@
     font-size: 8rem;
     color: var(--colorPrimary);
     text-decoration: none;
+    @media(max-width: 767px) {
+      font-size: 5rem;
+    }
 
     &:hover {
       text-decoration: none;

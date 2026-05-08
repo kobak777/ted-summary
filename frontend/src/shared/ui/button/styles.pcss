@@ -11,7 +11,7 @@
   --btnBgActive: #b91c12;
 
   --btnText: var(--colorWhite);
-  --btnHoverText: var(--colorWhite);
+  --btnTextHover: var(--colorWhite);
   --btnBorder: transparent;
 
   --btnDisabledBg: var(--colorGray200);
@@ -32,12 +32,11 @@
 
   &:hover {
     background: var(--btnBgHover);
-    color: var(--btnText);
+    color: var(--btnTextHover);
   }
 
   &:active {
     background: var(--btnBgActive);
-    transform: scale(0.98);
   }
 
   &:focus-visible {
@@ -52,11 +51,17 @@
     pointer-events: none;
   }
 
-  &--secondary {
+  &--isSecondary {
     --btnBg: transparent;
     --btnText: var(--colorPrimary);
     --btnBorder: var(--colorPrimary);
     --btnBgHover: var(--colorPrimarySoft);
+  }
+
+  &--isTransparent {
+    --btnBg: transparent;
+    --btnText: var(--colorPrimary);
+    --btnPaddingX: 0;
   }
 
   &--link {

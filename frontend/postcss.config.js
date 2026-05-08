@@ -1,5 +1,9 @@
 export default {
   plugins: {
-    "postcss-nested": {}
-  }
+    'postcss-import': {},
+    'postcss-mixins': {},
+    'postcss-custom-media': {},
+    'postcss-nested': {},
+    'postcss-flexbugs-fixes': {},
+  },
 };

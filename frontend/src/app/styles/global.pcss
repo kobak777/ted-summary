@@ -34,3 +34,15 @@ body {
   flex-direction: column;
   flex: 1;
 }
+
+@supports (min-height: 100dvh) {
+  body {
+    min-height: 100dvh;
+  }
+}
+
+@supports (min-height: -webkit-fill-available) {
+  body {
+    min-height: -webkit-fill-available;
+  }
+}

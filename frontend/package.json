@@ -11,9 +11,13 @@
   },
   "dependencies": {
     "axios": "^1.15.2",
+    "docx": "^9.6.1",
+    "i18next": "^26.0.10",
+    "i18next-browser-languagedetector": "^8.2.1",
     "msw": "^2.14.2",
     "react": "^19.2.5",
     "react-dom": "^19.2.5",
+    "react-i18next": "^17.0.7",
     "react-router-dom": "^7.14.2",
     "yup": "^1.7.1"
   },
@@ -29,7 +33,12 @@
     "eslint-plugin-react-refresh": "^0.5.2",
     "globals": "^17.5.0",
     "postcss": "^8.5.13",
+    "postcss-custom-media": "^12.0.1",
+    "postcss-flexbugs-fixes": "^5.0.2",
+    "postcss-import": "^16.1.1",
+    "postcss-mixins": "^12.1.2",
     "postcss-nested": "^7.0.2",
+    "postcss-preset-env": "^11.2.1",
     "postcss-syntax": "^0.36.2",
     "stylelint": "^17.11.0",
     "stylelint-config-standard": "^40.0.0",
@@ -37,5 +46,10 @@
     "typescript": "~6.0.2",
     "typescript-eslint": "^8.59.1",
     "vite": "^8.0.10"
+  },
+  "msw": {
+    "workerDirectory": [
+      "public"
+    ]
   }
 }
