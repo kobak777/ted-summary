@@ -4,7 +4,7 @@ import { SummaryForm } from "@/entity/summaryForm";
 import { SummaryDisplay } from "@/features/summaryDisplay";
 import { useCN } from "@/shared/lib/useCN/useCN";
 import "../styles.pcss";
-import { useTEDSummary } from "../model";
+import { useTEDSummary } from "../lib/useTEDSummary";
 import { Loader } from "@/shared/ui/loader";
 
 export const TEDSummaryWidget = () => {
