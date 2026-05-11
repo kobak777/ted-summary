@@ -1,6 +1,6 @@
 import { useTranslation } from "react-i18next";
 import { Section } from "@/shared/ui/section";
-import { SummaryForm } from "@/entity/summaryForm";
+import { SummaryForm } from "@/entities/summaryForm";
 import { SummaryDisplay } from "@/features/summaryDisplay";
 import { useCN } from "@/shared/lib/useCN/useCN";
 import "../styles.pcss";
